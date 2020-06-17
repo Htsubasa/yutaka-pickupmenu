@@ -710,7 +710,7 @@ body {
   transition: 0.5s;
 }
 
-.topvisual {
+.visualtop {
   width: 100%;
   height: 520px;
   position: relative;
@@ -721,12 +721,12 @@ body {
 }
 
 @media (max-width: 650px) {
-  .topvisual {
+  .visualtop {
     height: 260px;
   }
 }
 
-.topvisual-wrap {
+.visualtop-wrap {
   opacity: 0;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
@@ -734,12 +734,12 @@ body {
 }
 
 @media (max-width: 650px) {
-  .topvisual-wrap {
+  .visualtop-wrap {
     display: inline-block;
   }
 }
 
-.topvisual-wrap img {
+.visualtop-wrap img {
   width: 100%;
   height: 520px;
   -o-object-fit: cover;
@@ -747,13 +747,13 @@ body {
 }
 
 @media (max-width: 650px) {
-  .topvisual-wrap img {
+  .visualtop-wrap img {
     width: 100%;
     height: 260px;
   }
 }
 
-.topvisual .topvisualactive {
+.visualtop .topvisualactive {
   opacity: 1;
   -webkit-transition: 2s;
   transition: 2s;
@@ -761,7 +761,7 @@ body {
           transform: translateY(0px);
 }
 
-.topvisual-wrap:before {
+.visualtop-wrap:before {
   background-color: rgba(0, 0, 0, 0.5);
   /* どの範囲に重ねるかを指定 */
   position: absolute;
@@ -772,7 +772,7 @@ body {
   content: ' ';
 }
 
-.topvisual h2 {
+.visualtop h2 {
   position: absolute;
   font-size: 35px;
   font-family: 'Noto Serif JP', sans-serif;
@@ -788,20 +788,20 @@ body {
 }
 
 @media (max-width: 850px) {
-  .topvisual h2 {
+  .visualtop h2 {
     font-size: 4vw;
   }
 }
 
 @media (max-width: 650px) {
-  .topvisual h2 {
+  .visualtop h2 {
     font-size: 4.5vw;
     letter-spacing: 6px;
   }
 }
 
 @media (max-width: 480px) {
-  .topvisual h2 {
+  .visualtop h2 {
     font-size: 5vw;
     letter-spacing: 3px;
   }

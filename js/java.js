@@ -117,6 +117,7 @@ $(window).scroll(function (){
       });
 });
 
+
 $(window).scroll(function (){
   $('.menu-contain,.news-contain').each(function(){
       var elemPos = $(this).offset().top,
@@ -265,7 +266,7 @@ $(function(){
 
 
 $(function(){
-  var imgHeight = $('.mainvisual, .topvisual').outerHeight(); //画像の高さを取得。これがイベント発火位置になる。
+  var imgHeight = $('.mainvisual, .topvisual, .visualtop').outerHeight(); //画像の高さを取得。これがイベント発火位置になる。
   var header = $('.header'); //ヘッダーコンテンツ
 
   $(window).on('load scroll', function(){
@@ -304,7 +305,7 @@ $(function(){
 
 
 $(function(){
-  $('.topvisual-wrap').delay(1300).queue(function(){
+  $('.topvisual-wrap, .visualtop-wrap').delay(1300).queue(function(){
   $(this).addClass('topvisualactive').dequeue();
 });
 });
@@ -373,4 +374,16 @@ $(window).on('scroll', function (){
       }, spped);        }}
   });
 });
+
+
+
+$(function(){
+  $(".topvisual-wrap img:not(:first-child)").hide();
+  
+  setInterval(function() {
+    $(".topvisual-wrap img:first-child").fadeOut(1800).next("img").fadeIn(1800).end().appendTo(".topvisual-wrap");
+  },4500);
+});
+
+
 
